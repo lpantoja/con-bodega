@@ -153,7 +153,7 @@ echo"          </tr>";
       </form>
 	  </div>
     
-    <div id="Layer4"><strong>Ingrese las Cantidades de los porductos </strong></div>
+    <div id="Layer4"><strong>Ingrese las Cantidades de los productos </strong></div>
     </div>
   </div>
 </body>
