@@ -81,12 +81,12 @@ echo"	return true; ";
   $cod_pro=$_POST['edad'];
   $num_items=$_POST['num'];
   $descr_pro=$_POST['descr_pro'];
-   
+  $rut_usuario=$_POST['usuario'] ;
   $mes=$_POST['mes'];
   $dia=$_POST['dia'];
   $ano=$_POST['ano'];
   $fecha=$dia.$mes.$ano;
-  $sql="INSERT INTO pedido VALUES ($cod_pro,'$fecha','$descr_pro',$num_items)";
+  $sql="INSERT INTO pedido VALUES ($cod_pro,'$rut_usuario','$fecha','$descr_pro',$num_items)";
 
 $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 

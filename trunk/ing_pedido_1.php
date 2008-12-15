@@ -88,6 +88,12 @@ function valida(formulario){
 		return false; // NO se enviará el formulario.
 	}
 	
+		if((formulario.usuario.value)==false ){
+
+		alert("El campo usuario de Items debe rellenarse ");
+		return false; // NO se enviará el formulario.
+	}
+	
 	er=/^[0-9]+$/;
 	if(er.test(formulario.dia.value)==false){
 		alert("El campo Dia debe rellenarse con el dia");
@@ -155,6 +161,11 @@ function valida(formulario){
 			   echo"Menor o igual que $var ";
                }
 		   ?>  </strong></td>
+          </tr>
+		      <tr>
+            <td bordercolor="#004080" bgcolor="#F9FFFF"><div align="center" class="Estilo2">Rut usuario</div></td>
+            <td bordercolor="#004080" bgcolor="#F9FFFF"><input type="text" name="usuario"> 
+            (ejem 16275643-5)<strong>
           </tr>
           <tr>
             <td bordercolor="#004080" bgcolor="#F9FFFF"><div align="center" class="Estilo2">Fecha de Pedido </div></td>

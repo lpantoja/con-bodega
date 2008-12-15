@@ -151,13 +151,19 @@ function valida(formulario){
 include("connect.php");
 $rut=$_POST['user'];
 $clave=$_POST['pass'];
-$sqltipo="SELECT IDENTIFICADOR,login,clave FROM Usuario WHERE login = '$rut' and clave = '$clave' ";
+$sqltipo="SELECT * FROM Usuario WHERE login = '$rut' and clave = '$clave' ";
 $restipo=odbc_exec($cid,$sqltipo)or die(null) ;
 while(odbc_fetch_row($restipo))
 {
 		$tipo=odbc_result($restipo, "identificador");
 		$tipologin=odbc_result($restipo, "login");
+		$usuario=odbc_result($restipo, "id_usuario");
 		$tipoclave=odbc_result($restipo, "clave");	
+		
+		session_start();
+		$_SESSION["autentificado"]="SI";
+		$_SESSION["login"]=$usuario;
+		$_SESSION["tipo"]=$tipo;
 		echo "<html>";
 		echo "<body onLoad='{Control.submit();}'>";
 		echo "<form name='Control' action='indexb.html' method='get'>";
@@ -170,7 +176,7 @@ if($tipologin != $rut && tipoclave != $clave &&  $clave  != "" && $rut != ""){
 	echo "<html><head>";
 	echo "<script language='JavaScript'>alert('Usuario No Existe.');";
 	echo "</script></head><body>";	
-	echo "<form onSubmit='return valida(formulario)' name='formulario' method='POST' action='index.html'>";
+	echo "<form onSubmit='return valida(formulario)' name='formulario' method='POST' action='index.php'>";
 	echo "</body></html>";			
 }
 ?>

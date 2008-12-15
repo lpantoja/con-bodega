@@ -26,6 +26,20 @@ body {
 	top: -16px;
 	background-color: #FFFFFF;
 }
+#Layer2 {
+	position:absolute;
+	width:438px;
+	height:235px;
+	z-index:1;
+	left: 161px;
+	top: 75px;
+}
+.Estilo1 {
+	color: #000000;
+	font-weight: bold;
+	font-size: 18px;
+}
+.Estilo2 {color: #004080}
 -->
   </style></head>
   <body >
@@ -38,8 +52,22 @@ body {
    include ("connect.php");
 				$sql="delete from Producto where Id_prod =$cod_pro";
 				$result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
-  
+  	if($result){
+  	echo" <div class=\"Estilo1\" id=\"Layer2\">";
+echo"    <p>El Producto fue eliminado  con exito de la base de datos </p>";
+echo"    <p>&nbsp;</p>";
+echo"    <p class=\"Estilo2\">	<a href=\"borrar_productos.php\">[borrar otro producto]</a></p>";
+echo"  </div>";
+	}			
+	else{
+	 echo"<div class=\"Estilo1\" id=\"Layer2\">";
+ echo"    <p>Error, intentelo otra ves mas adelante </p>";
+ echo"    <p>&nbsp;</p>";
+ echo"    <p class=\"Estilo2\">	<a href=\"borrar_productos.php\">[Bolver a intentarlo]</a></p>";
+ echo"  </div>";
+	}
   ?>
+  
   </div>
   </div>
 </body>
