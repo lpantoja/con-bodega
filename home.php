@@ -42,12 +42,22 @@ body {
 	left: 403px;
 	top: 69px;
 }
+#Layer4 {
+	position:absolute;
+	width:67px;
+	height:35px;
+	z-index:3;
+	left: 693px;
+	top: 39px;
+}
 
 -->
   </style></head>
   <body >
 <div style="width: 800px; position: relative; margin-left: auto; margin-right: auto; left: 0; top: 0;">
-	
+	<?
+	include("seguridad.php");
+	?>
   <div id="Layer1">
     <div id="Layer2">
       <p><a href="ing_produc_1.php">Ingresar Producto</a></p>
@@ -62,11 +72,15 @@ body {
       <p><a href="ing_pedido_1.php">ingresar pedido </a></p>
       <p><a href="mod_pedido_0.php">Modificar pedido </a></p>
       <p><a href="borrar_pedidos.php">eliminar pedido </a></p>
+      <p><a href="ver_pedido_0.php">ver pedido </a></p>
       <p>&nbsp;</p>
-      <p><a href="ingresa_usuario.php">ingresa_usuario.php</a></p>
-      <p><a href="index3.php">modifica usuario</a></p>
-      <p><a href="elimina_usuario.php">elimina usuario  </a></p>
+      <p><a href="ingreso_usuario.php">ingresa_usuario.php</a></p>
+      <p><a href="mod_usuario_0.php">modifica usuario</a></p>
+      <p><a href="borra_per.php">elimina usuario  </a></p>
       <p>&nbsp;</p>
+    </div>
+    <div id="Layer4">
+      <p><a href="salir.php">Salir</a></p>
     </div>
   </div>
   </div>

@@ -18,29 +18,35 @@ body {
 	background-color: #00334F;
 }
 #Layer1 {
-	position:relative;
+	position:absolute;
 	width:800px;
-	height:446px;
+	height:534px;
 	z-index:0;
 	left: 0;
 	top: -16px;
 	background-color: #FFFFFF;
 }
 #Layer2 {
-	position:fixed;
-	width:800px;
-	height:400px;
+	position:absolute;
+	width:503px;
+	height:183px;
 	z-index:1;
-	left: 112px;
-	top: 77px;
+	left: 106px;
+	top: 68px;
 }
+.Estilo1 {
+	color: #000000;
+	font-weight: bold;
+	font-size: 18px;
+}
+.Estilo2 {color: #004080}
 -->
   </style></head>
   <body >
 <div style="width: 800px; position: relative; margin-left: auto; margin-right: auto; left: 0; top: 0;">
 	
-
-  <?
+  <div id="Layer1">
+     <?
   include ("connect.php");
   $cod_pro=$_POST['edad'];
   $stock_min=$_POST['stock_min'];
@@ -58,13 +64,24 @@ body {
 
 
   $sql="INSERT INTO Producto VALUES ($cod_pro,'$nom_pro', '$descr_pro', $precio, $stock_max, $stock_min, '$fecha', $cant  )";
-   echo " <div id=\"Layer1\">";
-    echo "<div id=\"Layer2\">$sql  $sss </div>";
-  echo "</div>";
 // generamos la tabla mediante odbc_result_all(); utilizando borde 1
 $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
-
+	if($result){
+	echo" <div class=\"Estilo1\" id=\"Layer2\">";
+echo"    <p>El Producto '$nom_pro', fue ingresado con exito de la base de datos </p>";
+echo"    <p>&nbsp;</p>";
+echo"    <p class=\"Estilo2\">	<a href=\"ing_produc_1.php\">[Ingresar otro Producto]</a></p>";
+echo"  </div>";
+	}			
+	else{
+	 echo"<div class=\"Estilo1\" id=\"Layer2\">";
+ echo"    <p>No se pudo ingresar el producto '$nom_pro' a la base de datos, intentelo otra ves mas adelante </p>";
+ echo"    <p>&nbsp;</p>";
+ echo"    <p class=\"Estilo2\">	<a href=\"ing_produc_1.php\">[Bolver a intentarlo]</a></p>";
+ echo"  </div>";
+	}
   ?>
+  </div>
   </div>
 </body>
 </html>

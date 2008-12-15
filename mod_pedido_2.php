@@ -90,13 +90,13 @@ echo"	return true; ";
   $cod_ped=$_POST['edad'];
   $num_items=$_POST['num'];
   $descr_pro=$_POST['descr_pro'];
-   
+    $rut_usuario=$_POST['usuario'] ;
   $mes=$_POST['mes'];
   $dia=$_POST['dia'];
   $ano=$_POST['ano'];
   $fecha=$dia.$mes.$ano;
   
-  $sql=" update pedido set fecha_ped='$fecha',descripcion='$descr_pro', NUMERO_ITEMS=NUMERO_ITEMS + $num_items where Id_pedido=$cod_ped";
+  $sql=" update pedido set id_usuario='$rut_usuario' ,fecha_ped='$fecha',descripcion='$descr_pro', NUMERO_ITEMS=NUMERO_ITEMS + $num_items where Id_pedido=$cod_ped";
      //  echo "$sql";
 $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 

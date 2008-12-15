@@ -26,6 +26,20 @@ body {
 	top: -16px;
 	background-color: #FFFFFF;
 }
+#Layer2 {
+	position:absolute;
+	width:468px;
+	height:281px;
+	z-index:1;
+	left: 150px;
+	top: 57px;
+}
+.Estilo1 {
+	color: #000000;
+	font-weight: bold;
+	font-size: 18px;
+}
+.Estilo2 {color: #004080}
 -->
   </style></head>
   <body >
@@ -40,6 +54,21 @@ body {
 				$result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
   				$sql="delete from pedido where ID_PEDIDO =$cod_ped";
 				$result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
+				
+	if($result){
+	echo" <div class=\"Estilo1\" id=\"Layer2\">";
+echo"    <p>El Pedido '$cod_ped', fue eliminado con exito de la base de datos </p>";
+echo"    <p>&nbsp;</p>";
+echo"    <p class=\"Estilo2\">	<a href=\"borrar_pedidos.php\">[Borrar otro pedido]</a></p>";
+echo"  </div>";
+	}			
+	else{
+	 echo"<div class=\"Estilo1\" id=\"Layer2\">";
+ echo"    <p>No se pudo eliminar el pedido '$cod_ped' de la base de datos, intentelo otra ves mas adelante </p>";
+ echo"    <p>&nbsp;</p>";
+ echo"    <p class=\"Estilo2\">	<a href=\"borrar_pedidos.php\">[Bolver a intentarlo]</a></p>";
+ echo"  </div>";
+	}				
   ?>
   </div>
   </div>

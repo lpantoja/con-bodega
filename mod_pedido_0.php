@@ -82,7 +82,7 @@ function valida(formulario){
         <table width="282" border="3" bordercolor="#004080" bgcolor="#F9FFFF">
           <tr>
             <td width="114" bordercolor="#004080" bgcolor="#F9FFFF"><div align="center" class="Estilo2">C&oacute;digo Pedido </div></td>
-            <td width="198" bordercolor="#004080" bgcolor="#F9FFFF"><input name="cod_pro2" type="text" ></td>
+            <td width="198" bordercolor="#004080" bgcolor="#F9FFFF"><input name="cod_pro" type="text" ></td>
           </tr>           
         </table>
         <p>

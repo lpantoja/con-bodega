@@ -55,13 +55,6 @@ body {
   
 <script>
 function valida(formulario){
-
-	er=/^[0-9]+$/;
-	if(er.test(formulario.cod_pro.value)==false){
-		alert("El campo codigo Producto debe rellenarse con caracteres numéricos");
-		return false; // NO se enviará el formulario.
-	}
-
 	er=/^[a-zA-Z0-9]+$/;
 	if(er.test(formulario.nom_pro.value)==false){
 		alert("El campo Nombre productos debe rellenarse con caracteres alfanuméricos simples");
@@ -91,16 +84,25 @@ function valida(formulario){
 		alert("El campo Sotck Min rellenarse con caracteres alfabéticos");
 		return false; // NO se enviará el formulario.
 	}
-	
-
-	// formato aceptado: Mat-usuario_2.07@em-1.servidor_p4.com
-	er=/^[a-zA-Z 0-9]+$/;
-	if(er.test(formulario.fecha.value)==false){
-		alert("El campo fecha no tiene un formato del tipo: usuario@servidor.com");
+		er=/^[0-9]+$/;
+	if(er.test(formulario.dia.value)==false){
+		alert("El campo Dia debe rellenarse con el dia");
 		return false; // NO se enviará el formulario.
 	}
 
-	return true; // Se enviará el formulario.
+	er=/^[0-9]+$/;
+	if(er.test(formulario.mes.value)==false){
+		alert("El campo Mes debe rellenarse con el mes");
+		return false; // NO se enviará el formulario.
+	}
+	
+	er=/^[0-9]+$/;
+	if(er.test(formulario.ano.value)==false){
+		alert("El campo año rellenarse con el año");
+		return false; // NO se enviará el formulario.
+	}
+
+	  return true; // Se enviará el formulario.
 }
 </script>
   </head>

@@ -28,30 +28,47 @@ body {
 }
 #Layer2 {
 	position:absolute;
-	width:200px;
-	height:115px;
+	width:528px;
+	height:276px;
 	z-index:1;
-	left: 112px;
-	top: 77px;
+	left: 72px;
+	top: 68px;
 }
+.Estilo1 {
+	color: #000000;
+	font-weight: bold;
+	font-size: 18px;
+}
+.Estilo2 {color: #004080}
+
 -->
   </style></head>
   <body >
 <div style="width: 800px; position: relative; margin-left: auto; margin-right: auto; left: 0; top: 0;">
-	
+	  <div id="Layer1">
 
   <?
    include ("connect.php");
   $cod_pro=$_POST['cod_pro'];
   $cant=$_POST['cant'];     
-   echo " <div id=\"Layer1\">";
-    echo "<div id=\"Layer2\">$cod_pro $cant</div>";
-  echo "</div>";
-
 	$sql="UPDATE Producto SET stock=(stock - $cant ) where Id_prod =$cod_pro";
 	$result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
-
+  	if($result){
+  	echo" <div class=\"Estilo1\" id=\"Layer2\">";
+echo"    <p>El Producto fue despacho  con exito  </p>";
+echo"    <p>&nbsp;</p>";
+echo"    <p class=\"Estilo2\">	<a href=\"des_produc_1.php\">[despachar otro producto]</a></p>";
+echo"  </div>";
+	}			
+	else{
+	 echo"<div class=\"Estilo1\" id=\"Layer2\">";
+ echo"    <p>Error, intentelo otra ves mas adelante </p>";
+ echo"    <p>&nbsp;</p>";
+ echo"    <p class=\"Estilo2\">	<a href=\"des_produc_1.php\">[Bolver a intentarlo]</a></p>";
+ echo"  </div>";
+	}
   ?>
+  </div>
   </div>
 </body>
 </html>

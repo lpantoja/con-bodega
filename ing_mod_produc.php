@@ -28,18 +28,24 @@ body {
 }
 #Layer2 {
 	position:absolute;
-	width:200px;
-	height:115px;
+	width:561px;
+	height:272px;
 	z-index:1;
-	left: 112px;
-	top: 77px;
+	left: 94px;
+	top: 73px;
 }
+.Estilo1 {
+	color: #000000;
+	font-weight: bold;
+	font-size: 18px;
+}
+.Estilo2 {color: #004080; font-weight: bold; font-size: 18px; }
 -->
   </style></head>
   <body >
 <div style="width: 800px; position: relative; margin-left: auto; margin-right: auto; left: 0; top: 0;">
 	
-
+<div id="Layer1">
   <?
   include ("connect.php");
   $cod_pro=$_POST['cod_pro'];
@@ -49,19 +55,34 @@ body {
   $descr_pro=$_POST['descr_pro'];
   $nom_pro=$_POST['nom_pro'];
   $fecha=$_POST['fecha'];
+  $ano=$fecha[0].$fecha[1].$fecha[2].$fecha[3];
+  $mes=$fecha[5].$fecha[6];
+  $dia=$fecha[8].$fecha[9];
+  $fecha=$dia.$mes.$ano;
   $cant=$_POST['cant'];
  //$cant=12;
-   echo " <div id=\"Layer1\">";
-    echo "<div id=\"Layer2\">$cod_pro $stock_min $stock_max $precio $descr_pro $nom_pro $fecha $cant  </div>";
-  echo "</div>";
 
   $sql="UPDATE Producto SET Id_prod=$cod_pro, Nombre_prod='$nom_pro', descripcion='$descr_pro',  precio=$precio, stock_max= $stock_max,  stock_min= $stock_min, fecha_ing='$fecha', stock=$cant where Id_prod=$cod_pro ";
-
 //$sql="UPDATE Producto SET stock=$cant where Id_prod=$cod_pro";
 // generamos la tabla mediante odbc_result_all(); utilizando borde 1
 $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
-
+	
+	if($result){
+	echo" <div class=\"Estilo1\" id=\"Layer2\">";
+echo"    <p>los  datos del Productos fueron actualizados  con exito en la base de datos </p>";
+echo"    <p>&nbsp;</p>";
+echo"    <p class=\"Estilo2\">	<a href=\"mod_produc_1.php\">[modificar otro producto]</a></p>";
+echo"  </div>";
+	}			
+	else{
+	 echo"<div class=\"Estilo1\" id=\"Layer2\">";
+ echo"    <p>No se pudo actualizar  los datos del producto en la base de datos, intentelo otra ves mas adelante </p>";
+ echo"    <p>&nbsp;</p>";
+ echo"    <p class=\"Estilo2\">	<a href=\"mod_produc_1.php\">[Bolver a intentarlo]</a></p>";
+ echo"  </div>";
+	}
   ?>
+</div>"
   </div>
 </body>
 </html>

@@ -61,7 +61,11 @@ function valida(formulario){
 		return false; // NO se enviará el formulario.
 	}
 
-	
+	if((formulario.usuario.value)==false ){
+
+		alert("El campo usuario de Items debe rellenarse ");
+		return false; // NO se enviará el formulario.
+	}
 		 <?
 		   $pedido=$_POST['cod_pro'];
 		        include ("connect.php");
@@ -135,7 +139,7 @@ function valida(formulario){
             <td width="150" bordercolor="#004080" bgcolor="#F9FFFF"><div align="center" class="Estilo2">C&oacute;digo Pedido </div></td>
             <td width="311" bordercolor="#004080" bgcolor="#F9FFFF"><strong>  <?
 		  $pedido=$_POST['cod_pro'];
-					echo"$pedido";
+					echo"$pedido"; // no borrar
           ?> </strong></td>
           </tr>
           <tr>
@@ -152,6 +156,21 @@ function valida(formulario){
                }
 			?></textarea> </td>
           </tr>
+		        <tr>
+            <td bordercolor="#004080" bgcolor="#F9FFFF"><div align="center" class="Estilo2">Rut usuario</div></td>
+            <td bordercolor="#004080" bgcolor="#F9FFFF"><input name="usuario" type="text" value="
+			<?
+			   $sql="select id_usuario  from pedido where Id_pedido='$pedido' ";
+				$result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec")); 
+				
+				 while (odbc_fetch_row($result))
+				{ 
+					$var=odbc_result($result,"id_usuario");
+			   echo"$var";
+               }
+			?>"> 
+            (ejem 16275643-5)<strong>
+          </tr>
           <tr>
             <td bordercolor="#004080" bgcolor="#F9FFFF"><div align="center" class="Estilo2">numero de items actuales</div></td>
             <td bordercolor="#004080" bgcolor="#F9FFFF"><strong>
@@ -164,9 +183,9 @@ function valida(formulario){
 				{ 
 					$var=odbc_result($result,"total");
 								   $actuales =$var;
-			   echo"$var ";
+			   echo"$var";
                }
-		   ?>  </strong></td>
+		   ?> </strong></td>
           </tr>
 		     <tr>
             <td bordercolor="#004080" bgcolor="#F9FFFF"><div align="center" class="Estilo2">agregar mas items </div></td>
