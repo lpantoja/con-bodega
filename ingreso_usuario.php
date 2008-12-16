@@ -65,7 +65,7 @@ body {
 function valida(formulario){
 
 	er=/^[0-9]+$/;
-	if(er.test(formulario.user.value)==false){
+	if(er.test(formulario.USUARIO.value)==false){
 		alert("El campo usuario debe rellenarse con caracteres alfanuméricos simples");
 		return false; // NO se enviará el formulario.
 	}
@@ -75,7 +75,7 @@ function valida(formulario){
 		return false; // NO se enviará el formulario.
 	}
 	er=/^[a-zA-Z0-9]+$/;
-	if(er.test(formulario.pass.value)==false){
+	if(er.test(formulario.passe.value)==false){
 		alert("El campo clave debe rellenarse con caracteres alfanuméricos simples");
 		return false; // NO se enviará el formulario.
 	}
@@ -112,7 +112,7 @@ function valida(formulario){
 <td width="31%" height="33"><span class="Estilo4"><strong>Rut</strong>:</span></td>
 <td width="69%">
  
-  <input type="text" name="user" size="20" maxlength="20">
+  <input type="text" name="USUARIO" size="20" maxlength="20">
   <strong>-</strong>
  <label>
  <input name="dig" type="text" size="1" maxlength="1" />
@@ -123,7 +123,7 @@ function valida(formulario){
 </tr>
 <tr>
 <td width="31%" height="33"><span class="Estilo4"><strong>Clave:</strong></span></td>
-<td width="69%"><input type="password" name="pass" size="20" maxlength="20"></td>
+<td width="69%"><input type="password" name="passe" size="20" maxlength="20"></td>
 </tr>
 <tr>
 <td width="31%" height="32"><span class="Estilo4"><strong>Nombre:</strong></span></td>

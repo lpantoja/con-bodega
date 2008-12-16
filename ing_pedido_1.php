@@ -56,6 +56,12 @@ body {
 <script>
 function valida(formulario){
 
+	er=/^[a-zA-Z0-9]+$/;
+	if((formulario.cod_ped.value)==false){
+		alert("El campo codigo pedido debe rellenarse con caracteres alfanuméricos simples");
+		return false; // NO se enviará el formulario.
+	}
+
 	if((formulario.descr_pro.value)==false){
 		alert("El campo Descripcion debe rellenarse con caracteres alfabéticos");
 		return false; // NO se enviará el formulario.
@@ -128,20 +134,7 @@ function valida(formulario){
         <table width="481" border="3" bordercolor="#004080" bgcolor="#F9FFFF">
           <tr>
             <td width="150" bordercolor="#004080" bgcolor="#F9FFFF"><div align="center" class="Estilo2">C&oacute;digo Pedido </div></td>
-            <td width="311" bordercolor="#004080" bgcolor="#F9FFFF"><strong>  <?
-		  
-		   include ("connect.php");
-				$sql="SELECT Count(*) AS Total FROM pedido ";
-				$result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
-
-			   while (odbc_fetch_row($result))
-				{ 
-					$var=odbc_result($result,"Total") + 1;
-					echo"$var";
-					
-				}
-		 
-          ?> </strong></td>
+            <td width="311" bordercolor="#004080" bgcolor="#F9FFFF"><input type="text" name="cod_ped"></td>
           </tr>
           <tr>
             <td bordercolor="#004080" bgcolor="#F9FFFF"><div align="center" class="Estilo2">Descrici&oacute;n</div></td>
@@ -172,7 +165,7 @@ function valida(formulario){
             <td bordercolor="#004080" bgcolor="#F9FFFF">
 			<select name="dia" > 
 
-			<option>Eliga Dia</option>
+			<option selected>Elija Dia</option>
 			<? 
 			for($i=1;$i<32;$i++){
 				if($i<10)
@@ -183,7 +176,7 @@ function valida(formulario){
 			?>
 			</select>
 		   <select name="mes" > 
-		   <option>Eliga Mes</option>
+		   <option>Elija Mes</option>
 		<?
 			for($i=1;$i<13;$i++){
 				if($i<10)
@@ -194,7 +187,7 @@ function valida(formulario){
 			?>
 			</select>
 			<select name="ano" >
-			<option>Eliga A&ntilde;o</option>
+			<option>Elija A&ntilde;o</option>
 			<?
 			for($i=2008;$i<2020;$i++)
 				echo " <option>$i</option> ";
@@ -205,20 +198,7 @@ function valida(formulario){
         </table>
         <p>
           <label>
-		  <?
-		  
-		   include ("connect.php");
-				$sql="SELECT MAX(ID_PEDIDO) AS Total FROM pedido ";
-				$result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
-
-			   while (odbc_fetch_row($result))
-				{ 
-					$var=odbc_result($result,"Total") + 1;
-					echo"<input type= \"hidden\" name=\"edad\" value=\"$var\">";
-					
-				}
-		 
-          ?>
+	
 		  <input type="submit" name="enviar" value="Enviar">
 		  
           </label>

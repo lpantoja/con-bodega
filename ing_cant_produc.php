@@ -62,7 +62,7 @@ body {
   $cant=$_POST['cant'];     
 
 
-	$sql="UPDATE Producto SET stock=($cant + stock) where Id_prod =$cod_pro";
+	$sql="UPDATE Producto SET stock=($cant + stock) where Id_prod ='$cod_pro'";
 	$result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 	
 			   
@@ -82,7 +82,7 @@ echo"  </div>";
 	}
 	
 		
-		$sql="Select * from Producto where Id_prod =$cod_pro ";
+		$sql="Select * from Producto where Id_prod ='$cod_pro' ";
 				$resulta=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 
 			   while (odbc_fetch_row($resulta))

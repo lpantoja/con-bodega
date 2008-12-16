@@ -54,7 +54,7 @@ function valida(formulario){
 
 for($i=0;$i<21;$i++){
 echo"	er=/^[0-9]+$/;";
-echo"if(er.test(formulario.cod_pro$i.value)==false){";
+echo"if((formulario.cod_pro$i.value)=='Escoga un codigo'){";
 $fila=$i+1;
 echo"alert(\"El campo codigo Producto de la fila $fila debe rellenarse con caracteres numéricos\");";
 echo"return false;";
@@ -78,7 +78,7 @@ echo"	return true; ";
   <div id="Layer1">
     <?
   include ("connect.php");
-  $cod_pro=$_POST['edad'];
+  $cod_pro=$_POST['cod_ped'];
   $num_items=$_POST['num'];
   $descr_pro=$_POST['descr_pro'];
   $rut_usuario=$_POST['usuario'] ;
@@ -86,7 +86,7 @@ echo"	return true; ";
   $dia=$_POST['dia'];
   $ano=$_POST['ano'];
   $fecha=$dia.$mes.$ano;
-  $sql="INSERT INTO pedido VALUES ($cod_pro,'$rut_usuario','$fecha','$descr_pro',$num_items)";
+  $sql="INSERT INTO pedido VALUES ('$cod_pro','$rut_usuario','$fecha','$descr_pro',$num_items)";
 
 $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 
@@ -103,7 +103,7 @@ $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 		  for($i=0;$i<$num_items;$i++){
 echo"		  <tr>	  ";
      echo"       <td><select name=\"cod_pro$i\" >";
-echo"		   <option>Escoga un codigo  </option> ";
+echo"		   <option>Escoga un codigo</option> ";
 		   
                  include ("connect.php");
 				$sql="Select * from Producto ";

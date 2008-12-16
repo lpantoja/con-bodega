@@ -52,7 +52,7 @@ body {
 function valida(formulario){
 <? $cod_ped=$_POST['edad'];
      include ("connect.php");
-			   $sql="select count(*) as total from Pedido_producto where Id_pedido=$cod_ped";
+			   $sql="select count(*) as total from Pedido_producto where Id_pedido='$cod_ped'";
 				$result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec")); 
 				
 				 while (odbc_fetch_row($result))
@@ -63,7 +63,7 @@ function valida(formulario){
                }
 for($i=0;$i<21;$i++){
 echo"	er=/^[0-9]+$/;";
-echo"if(er.test(formulario.cod_pro$i.value)==false){";
+echo"if((formulario.cod_pro$i.value)=='Escoja un codigo'){";
 $fila=$i+1+$actuales;
 echo"alert(\"El campo codigo Producto de la fila $fila debe rellenarse con caracteres numéricos\");";
 echo"return false;";
@@ -96,7 +96,7 @@ echo"	return true; ";
   $ano=$_POST['ano'];
   $fecha=$dia.$mes.$ano;
   
-  $sql=" update pedido set id_usuario='$rut_usuario' ,fecha_ped='$fecha',descripcion='$descr_pro', NUMERO_ITEMS=NUMERO_ITEMS + $num_items where Id_pedido=$cod_ped";
+  $sql=" update pedido set id_usuario='$rut_usuario' ,fecha_ped='$fecha',descripcion='$descr_pro', NUMERO_ITEMS=NUMERO_ITEMS + $num_items where Id_pedido='$cod_ped'";
      //  echo "$sql";
 $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 
@@ -110,7 +110,7 @@ $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
             <td width="198"><div align="center"><strong>Cantidad del Producto </strong></div></td>
           </tr>
           <?
-		  $sql="select  *  from Pedido_producto where Id_pedido=$cod_ped";
+		  $sql="select  *  from Pedido_producto where Id_pedido='$cod_ped'";
 				$result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 $i=0;
 			   while (odbc_fetch_row($result))
@@ -140,7 +140,7 @@ echo"          </tr>";
 		  for($i=0;$i<$num_items;$i++){
 echo"		  <tr>	  ";
      echo"       <td><select name=\"cod_pro$i\" >";
-echo"		   <option>Escoga un codigo  </option> ";
+echo"		   <option>Escoja un codigo</option> ";
 		   
                  include ("connect.php");
 				$sql="Select * from Producto ";

@@ -50,9 +50,9 @@ body {
   $cod_ped=$_GET['cod_pro'];
   $num=$_GET['nom_pro'];
    include ("connect.php");
-				$sql="delete from pedido_producto where ID_PEDIDO =$cod_ped";
+				$sql="delete from pedido_producto where ID_PEDIDO ='$cod_ped'";
 				$result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
-  				$sql="delete from pedido where ID_PEDIDO =$cod_ped";
+  				$sql="delete from pedido where ID_PEDIDO ='$cod_ped'";
 				$result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 				
 	if($result){

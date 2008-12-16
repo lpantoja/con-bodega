@@ -20,6 +20,6 @@ Version 1.3 revision 5
 - BUG: se crea una nueva actualizacion 
 
 
-Version 2.0  revision6
+Version 2.0  revision6,7,8
 
 - se hizo un arreglo estructural de todo  el sistema creando nuevos modulos etc	

@@ -69,7 +69,7 @@ function valida(formulario){
 		 <?
 		   $pedido=$_POST['cod_pro'];
 		        include ("connect.php");
- $sql="select count(*) as total from Pedido_producto where Id_pedido=$pedido ";
+ $sql="select count(*) as total from Pedido_producto where Id_pedido='$pedido' ";
 				$result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec")); 
 				
 				 while (odbc_fetch_row($result))
@@ -176,7 +176,7 @@ function valida(formulario){
             <td bordercolor="#004080" bgcolor="#F9FFFF"><strong>
            <?
 		     include ("connect.php");
-			   $sql="select count(*) as total from Pedido_producto where Id_pedido=$pedido ";
+			   $sql="select count(*) as total from Pedido_producto where Id_pedido='$pedido' ";
 				$result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec")); 
 				
 				 while (odbc_fetch_row($result))
@@ -210,7 +210,7 @@ function valida(formulario){
             <td bordercolor="#004080" bgcolor="#F9FFFF">
 			<select name="dia" > 
 
-			<option>Eliga Dia</option>
+			<option>Elija Dia</option>
 			<? 
 			for($i=1;$i<32;$i++){
 				if($i<10)
@@ -221,7 +221,7 @@ function valida(formulario){
 			?>
 			</select>
 		   <select name="mes" > 
-		   <option>Eliga Mes</option>
+		   <option>Elija Mes</option>
 		<?
 			for($i=1;$i<13;$i++){
 				if($i<10)
@@ -232,7 +232,7 @@ function valida(formulario){
 			?>
 			</select>
 			<select name="ano" >
-			<option>Eliga A&ntilde;o</option>
+			<option>Elija A&ntilde;o</option>
 			<?
 			for($i=2008;$i<2020;$i++)
 				echo " <option>$i</option> ";

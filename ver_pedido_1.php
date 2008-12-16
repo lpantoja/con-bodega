@@ -20,7 +20,7 @@ body {
 #Layer1 {
 	position:absolute;
 	width:800px;
-	height:899px;
+	height:1039px;
 	z-index:0;
 	left: 0;
 	top: -16px;
@@ -47,9 +47,6 @@ body {
 	left: 128px;
 	top: 68px;
 }
-.Estilo2 {	color: #004080;
-	font-weight: bold;
-}
 #Layer4 {
 	position:absolute;
 	width:463px;
@@ -70,6 +67,18 @@ body {
 	color: #000000;
 	font-weight: bold;
 }
+#Layer6 {
+	position:absolute;
+	width:146px;
+	height:64px;
+	z-index:5;
+	left: 666px;
+	top: 16px;
+}
+.Estilo6 {
+	font-size: 18px;
+	font-weight: bold;
+}
 -->
   </style></head>
   <body >
@@ -80,6 +89,7 @@ body {
     <?
 	  include ("connect.php");
 	   $pedido=$_POST['cod_pro'];
+	     $pedido=$_GET['cod_pro'];
 	echo"<div id=\"Layer3\">";
 echo"      <table width=\"481\" border=\"3\" bordercolor=\"#004080\" bgcolor=\"#F9FFFF\">";
 echo"        <tr>";
@@ -148,6 +158,6 @@ echo"    </div>";
     
     <div class="Estilo5" id="Layer5">Productos</div>
   </div>
-  </div>
+</div>
 </body>
 </html>

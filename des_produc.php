@@ -34,12 +34,22 @@ body {
 	left: 72px;
 	top: 68px;
 }
+
+#Layer3 {
+	position:absolute;
+	width:535px;
+	height:140px;
+	z-index:1;
+	left: 87px;
+	top: 270px;
+}
 .Estilo1 {
 	color: #000000;
 	font-weight: bold;
 	font-size: 18px;
 }
 .Estilo2 {color: #004080}
+.Estilo3 {color: #FF0000; font-weight: bold; font-size: 18px; }
 
 -->
   </style></head>
@@ -51,7 +61,25 @@ body {
    include ("connect.php");
   $cod_pro=$_POST['cod_pro'];
   $cant=$_POST['cant'];     
-	$sql="UPDATE Producto SET stock=(stock - $cant ) where Id_prod =$cod_pro";
+  
+  	$sql="Select stock from Producto where Id_prod ='$cod_pro' ";
+				$resulta=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
+
+			   while (odbc_fetch_row($resulta))				 
+					$var1=odbc_result($resulta,"stock");
+			              
+			 if ($var1-$cant<0){
+			 
+			echo" <div class=\"Estilo1\" id=\"Layer2\">";
+			echo"    <p>El Producto NO PUEDE ser  despacho, ya que no hay sufuciente Stock </p>";
+			echo"    <p>&nbsp;</p>";
+			echo"    <p class=\"Estilo2\">	<a href=\"des_produc_1.php\">[despachar otro producto]</a></p>";
+			echo"  </div>";
+			 }
+			 else{
+  
+  
+	$sql="UPDATE Producto SET stock=(stock - $cant ) where Id_prod ='$cod_pro'";
 	$result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
   	if($result){
   	echo" <div class=\"Estilo1\" id=\"Layer2\">";
@@ -67,6 +95,20 @@ echo"  </div>";
  echo"    <p class=\"Estilo2\">	<a href=\"des_produc_1.php\">[Bolver a intentarlo]</a></p>";
  echo"  </div>";
 	}
+	
+		$sql="Select * from Producto where Id_prod ='$cod_pro' ";
+				$resulta=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
+
+			   while (odbc_fetch_row($resulta))
+				{ 
+					$var1=odbc_result($resulta,"stock");
+    				$var2=odbc_result($resulta,"stock_min");
+			  
+               }
+			 if ($var1<$var2){
+			 echo"<div class=\"Estilo3\" id=\"Layer3\">NOTA :<span class=\"Estilo3\"> Este producto se encuentra en stock critico,debe tener presente esto en  futuros pedidos </span></div>";
+			 }
+}	
   ?>
   </div>
   </div>
