@@ -95,108 +95,104 @@ $pedido = $_POST['cod_ped'];
 $usuario='16275643-5';
 
 if($cant_prod0){
-$sql="INSERT INTO Pedido_producto VALUES ($cod_pro0,$pedido, $cant_prod0)";
-$result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
+$sql="INSERT INTO Pedido_producto VALUES ('$cod_pro0','$pedido', $cant_prod0)";
+ $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 
 if($cant_prod1){
- $sql="INSERT INTO Pedido_producto VALUES ($cod_pro1,$pedido, $cant_prod1)";
+ $sql="INSERT INTO Pedido_producto VALUES ('$cod_pro1','$pedido', $cant_prod1)";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 
 if($cant_prod2){
- $sql="INSERT INTO Pedido_producto VALUES ($cod_pro2,$pedido, $cant_prod2)";
+ $sql="INSERT INTO Pedido_producto VALUES ('$cod_pro2','$pedido', $cant_prod2)";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 
 if($cant_prod3){
- $sql="INSERT INTO Pedido_producto VALUES ($cod_pro3,$pedido, $cant_prod3)";
+ $sql="INSERT INTO Pedido_producto VALUES ('$cod_pro3','$pedido', $cant_prod3)";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 
 if($cant_prod4){
- $sql="INSERT INTO Pedido_producto VALUES ($cod_pro4,$pedido, $cant_prod4)";
+ $sql="INSERT INTO Pedido_producto VALUES ('$cod_pro4','$pedido', $cant_prod4)";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 
 if($cant_prod5){
- $sql="INSERT INTO Pedido_producto VALUES ($cod_pro5,$pedido, $cant_prod5)";
+ $sql="INSERT INTO Pedido_producto VALUES ('$cod_pro5','$pedido', $cant_prod5)";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 
 if($cant_prod6){
- $sql="INSERT INTO Pedido_producto VALUES ($cod_pro6,$pedido, $cant_prod6)";
+ $sql="INSERT INTO Pedido_producto VALUES ('$cod_pro6','$pedido', $cant_prod6)";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 if($cant_prod7){
- $sql="INSERT INTO Pedido_producto VALUES ($cod_pro7,$pedido, $cant_prod7)";
- $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
-}
-if($cant_prod){
- $sql="INSERT INTO Pedido_producto VALUES ($cod_pro,$pedido, $cant_prod)";
+ $sql="INSERT INTO Pedido_producto VALUES ('$cod_pro7','$pedido', $cant_prod7)";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 if($cant_prod8){
- $sql="INSERT INTO Pedido_producto VALUES ($cod_pro8,$pedido, $cant_prod8)";
+ $sql="INSERT INTO Pedido_producto VALUES ('$cod_pro8','$pedido', $cant_prod8)";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 
 if($cant_prod9){
- $sql="INSERT INTO Pedido_producto VALUES ($cod_pro9,$pedido, $cant_prod9)";
+ $sql="INSERT INTO Pedido_producto VALUES ('$cod_pro9','$pedido', $cant_prod9)";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 
 if($cant_prod10){
- $sql="INSERT INTO Pedido_producto VALUES ($cod_pro10,$pedido, $cant_prod10)";
+ $sql="INSERT INTO Pedido_producto VALUES ('$cod_pro10','$pedido', $cant_prod10)";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 
 if($cant_prod11){
- $sql="INSERT INTO Pedido_producto VALUES ($cod_pro11,$pedido, $cant_prod11)";
+ $sql="INSERT INTO Pedido_producto VALUES ('$cod_pro11','$pedido', $cant_prod11)";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 
 if($cant_prod12){
- $sql="INSERT INTO Pedido_producto VALUES ($cod_pro12,$pedido, $cant_prod12)";
+ $sql="INSERT INTO Pedido_producto VALUES ('$cod_pro12','$pedido', $cant_prod12)";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 
 if($cant_prod13){
- $sql="INSERT INTO Pedido_producto VALUES ($cod_pro13,$pedido, $cant_prod13)";
+ $sql="INSERT INTO Pedido_producto VALUES ('$cod_pro13','$pedido', $cant_prod13)";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 
 if($cant_prod14){
- $sql="INSERT INTO Pedido_producto VALUES ($cod_pro14,$pedido, $cant_prod14)";
+ $sql="INSERT INTO Pedido_producto VALUES ('$cod_pro14','$pedido', $cant_prod14)";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 
 if($cant_prod15){
- $sql="INSERT INTO Pedido_producto VALUES ($cod_pro15,$pedido, $cant_prod15)";
+ $sql="INSERT INTO Pedido_producto VALUES ('$cod_pro15','$pedido', $cant_prod15)";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 
 if($cant_prod16){
- $sql="INSERT INTO Pedido_producto VALUES ($cod_pro16,$pedido, $cant_prod16)";
+ $sql="INSERT INTO Pedido_producto VALUES ('$cod_pro16','$pedido', $cant_prod16)";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 
 if($cant_prod17){
- $sql="INSERT INTO Pedido_producto VALUES ($cod_pro17,$pedido, $cant_prod17)";
+ $sql="INSERT INTO Pedido_producto VALUES ('$cod_pro17','$pedido', $cant_prod17)";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 
 if($cant_prod18){
- $sql="INSERT INTO Pedido_producto VALUES ($cod_pro18,$pedido, $cant_prod18)";
+ $sql="INSERT INTO Pedido_producto VALUES ('$cod_pro18','$pedido', $cant_prod18)";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 
 if($cant_prod19){
- $sql="INSERT INTO Pedido_producto VALUES ($cod_pro19,$pedido, $cant_prod19)";
+ $sql="INSERT INTO Pedido_producto VALUES ('$cod_pro19','$pedido', $cant_prod19)";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 if($cant_prod20){
- $sql="INSERT INTO Pedido_producto VALUES ($cod_pro20,$pedido, $cant_prod20)";
+ $sql="INSERT INTO Pedido_producto VALUES ('$cod_pro20','$pedido', $cant_prod20)";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 
@@ -268,207 +264,207 @@ $cod_pro_mo19=$_POST['cod_ped_bo19'];
 $cod_pro_mo20=$_POST['cod_ped_bo20']; 
 
  if($mod_cant_prod0 && ($mod_cod_pro0 !=  $eliminar)){ 
-$sql="update pedido_producto set CANTIDAD=$mod_cant_prod0 where ID_PEDIDO=$pedido and ID_PROD=$mod_cod_pro0 ";
+$sql="update pedido_producto set CANTIDAD=$mod_cant_prod0 where ID_PEDIDO='$pedido' and ID_PROD='$mod_cod_pro0'";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 
 if($mod_cant_prod1 && $mod_cod_pro1 !=  $eliminar){ 
-$sql="update pedido_producto set CANTIDAD=$mod_cant_prod1 where ID_PEDIDO=$pedido and ID_PROD=$mod_cod_pro1 ";
+$sql="update pedido_producto set CANTIDAD=$mod_cant_prod1 where ID_PEDIDO='$pedido' and ID_PROD='$mod_cod_pro1'";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 
 if($mod_cant_prod2 && $mod_cod_pro2 !=  $eliminar){ 
-$sql="update pedido_producto set CANTIDAD=$mod_cant_prod2 where ID_PEDIDO=$pedido and ID_PROD=$mod_cod_pro2 ";
+$sql="update pedido_producto set CANTIDAD=$mod_cant_prod2 where ID_PEDIDO='$pedido' and ID_PROD='$mod_cod_pro2'";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 
 if($mod_cant_prod3 && $mod_cod_pro3 !=  $eliminar){ 
-$sql="update pedido_producto set CANTIDAD=$mod_cant_prod3 where ID_PEDIDO=$pedido and ID_PROD=$mod_cod_pro3 ";
+$sql="update pedido_producto set CANTIDAD=$mod_cant_prod3 where ID_PEDIDO='$pedido' and ID_PROD='$mod_cod_pro3'";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 
 if($mod_cant_prod4 && $mod_cod_pro4 !=  $eliminar){ 
-$sql="update pedido_producto set CANTIDAD=$mod_cant_prod4 where ID_PEDIDO=$pedido and ID_PROD=$mod_cod_pro4 ";	
+$sql="update pedido_producto set CANTIDAD=$mod_cant_prod4 where ID_PEDIDO='$pedido' and ID_PROD='$mod_cod_pro4'";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 
 if($mod_cant_prod5 && $mod_cod_pro5 !=  $eliminar){ 
-$sql="update pedido_producto set CANTIDAD=$mod_cant_prod5 where ID_PEDIDO=$pedido and ID_PROD=$mod_cod_pro5 ";
+$sql="update pedido_producto set CANTIDAD=$mod_cant_prod5 where ID_PEDIDO='$pedido' and ID_PROD='$mod_cod_pro5'";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 
 if($mod_cant_prod6 && $mod_cod_pro6 !=  $eliminar){ 
-$sql="update pedido_producto set CANTIDAD=$mod_cant_prod6 where ID_PEDIDO=$pedido and ID_PROD=$mod_cod_pro6 ";	
+$sql="update pedido_producto set CANTIDAD=$mod_cant_prod6 where ID_PEDIDO='$pedido' and ID_PROD='$mod_cod_pro6'";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 if($mod_cant_prod7 && $mod_cod_pro7 !=  $eliminar){ 
-$sql="update pedido_producto set CANTIDAD=$mod_cant_prod7 where ID_PEDIDO=$pedido and ID_PROD=$mod_cod_pro7 ";
+$sql="update pedido_producto set CANTIDAD=$mod_cant_prod7 where ID_PEDIDO='$pedido' and ID_PROD='$mod_cod_pro7'";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 if($mod_cant_prod8 && $mod_cod_pro8 !=  $eliminar){ 
-$sql="update pedido_producto set CANTIDAD=$mod_cant_prod8 where ID_PEDIDO=$pedido and ID_PROD=$mod_cod_pro8 ";
+$sql="update pedido_producto set CANTIDAD=$mod_cant_prod8 where ID_PEDIDO='$pedido' and ID_PROD='$mod_cod_pro8'";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 
 if($mod_cant_prod9 && $mod_cod_pro9 !=  $eliminar){ 
-$sql="update pedido_producto set CANTIDAD=$mod_cant_prod9 where ID_PEDIDO=$pedido and ID_PROD=$mod_cod_pro9 ";
+$sql="update pedido_producto set CANTIDAD=$mod_cant_prod9 where ID_PEDIDO='$pedido' and ID_PROD='$mod_cod_pro9'";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 
 if($mod_cant_prod10 && $mod_cod_pro10 !=  $eliminar){ 
-$sql="update pedido_producto set CANTIDAD=$mod_cant_prod10 where ID_PEDIDO=$pedido and ID_PROD=$mod_cod_pro10 ";
+$sql="update pedido_producto set CANTIDAD=$mod_cant_prod10 where ID_PEDIDO='$pedido' and ID_PROD='$mod_cod_pro10'";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 
 if($mod_cant_prod11 && $mod_cod_pro11 !=  $eliminar){ 
-$sql="update pedido_producto set CANTIDAD=$mod_cant_prod11 where ID_PEDIDO=$pedido and ID_PROD=$mod_cod_pro11 ";
+$sql="update pedido_producto set CANTIDAD=$mod_cant_prod11 where ID_PEDIDO='$pedido' and ID_PROD='$mod_cod_pro11'";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 
 if($mod_cant_prod12 && $mod_cod_pro12 !=  $eliminar){ 
-$sql="update pedido_producto set CANTIDAD=$mod_cant_prod12 where ID_PEDIDO=$pedido and ID_PROD=$mod_cod_pro12 ";
+$sql="update pedido_producto set CANTIDAD=$mod_cant_prod12 where ID_PEDIDO='$pedido' and ID_PROD='$mod_cod_pro12'";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 
 if($mod_cant_prod13 && $mod_cod_pro13 !=  $eliminar){ 
-$sql="update pedido_producto set CANTIDAD=$mod_cant_prod13 where ID_PEDIDO=$pedido and ID_PROD=$mod_cod_pro13 ";
+$sql="update pedido_producto set CANTIDAD=$mod_cant_prod13 where ID_PEDIDO='$pedido' and ID_PROD='$mod_cod_pro13'";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 
 if($mod_cant_prod14 && $mod_cod_pro14!=  $eliminar){ 
-$sql="update pedido_producto set CANTIDAD=$mod_cant_prod14 where ID_PEDIDO=$pedido and ID_PROD=$mod_cod_pro14 ";
+$sql="update pedido_producto set CANTIDAD=$mod_cant_prod14 where ID_PEDIDO='$pedido' and ID_PROD='$mod_cod_pro14'";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 
 if($mod_cant_prod15 && $mod_cod_pro15!=  $eliminar){ 
-$sql="update pedido_producto set CANTIDAD=$mod_cant_prod15 where ID_PEDIDO=$pedido and ID_PROD=$mod_cod_pro15 ";
+$sql="update pedido_producto set CANTIDAD=$mod_cant_prod15 where ID_PEDIDO='$pedido' and ID_PROD='$mod_cod_pro15'";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 
 if($mod_cant_prod16 && $mod_cod_pro16 !=  $eliminar){ 
-$sql="update pedido_producto set CANTIDAD=$mod_cant_prod16 where ID_PEDIDO=$pedido and ID_PROD=$mod_cod_pro16 ";	
+$sql="update pedido_producto set CANTIDAD=$mod_cant_prod16 where ID_PEDIDO='$pedido' and ID_PROD='$mod_cod_pro16'";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 
 if($mod_cant_prod17 && $mod_cod_pro17 !=  $eliminar){ 
-$sql="update pedido_producto set CANTIDAD=$mod_cant_prod17 where ID_PEDIDO=$pedido and ID_PROD=$mod_cod_pro17 ";
+$sql="update pedido_producto set CANTIDAD=$mod_cant_prod17 where ID_PEDIDO='$pedido' and ID_PROD='$mod_cod_pro17'";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 
 if($mod_cant_prod18 && $mod_cod_pro18 !=  $eliminar){ 
-$sql="update pedido_producto set CANTIDAD=$mod_cant_prod18 where ID_PEDIDO=$pedido and ID_PROD=$mod_cod_pro18 ";
+$sql="update pedido_producto set CANTIDAD=$mod_cant_prod18 where ID_PEDIDO='$pedido' and ID_PROD='$mod_cod_pro18'";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 
 if($mod_cant_prod19 && $mod_cod_pro19 !=  $eliminar){ 
-$sql="update pedido_producto set CANTIDAD=$mod_cant_prod19 where ID_PEDIDO=$pedido and ID_PROD=$mod_cod_pro19 ";	
+$sql="update pedido_producto set CANTIDAD=$mod_cant_prod19 where ID_PEDIDO='$pedido' and ID_PROD='$mod_cod_pro19'";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 if($mod_cant_prod20 && $mod_cod_pro20 !=  $eliminar){ 
-$sql="update pedido_producto set CANTIDAD=$mod_cant_prod20 where ID_PEDIDO=$pedido and ID_PROD=$mod_cod_pro20 ";
+$sql="update pedido_producto set CANTIDAD=$mod_cant_prod20 where ID_PEDIDO='$pedido' and ID_PROD='$mod_cod_pro20'";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
  $eliminar=sprintf('Eliminar esta fila');
  
  if($mod_cod_pro0== $eliminar ){ 
-$sql="delete from pedido_producto where ID_PEDIDO=$pedido and ID_PROD=$cod_pro_mo0 ";
+$sql="delete from pedido_producto where ID_PEDIDO='$pedido' and ID_PROD='$cod_pro_mo0'";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 
 if($mod_cod_pro1== $eliminar ){
-$sql="delete from pedido_producto where ID_PEDIDO=$pedido and ID_PROD=$cod_pro_mo1 ";
+$sql="delete from pedido_producto where ID_PEDIDO='$pedido' and ID_PROD='$cod_pro_mo1'";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 
 if($mod_cod_pro2== $eliminar ){
-$sql="delete from pedido_producto  where ID_PEDIDO=$pedido and ID_PROD=$cod_pro_mo2 ";
+$sql="delete from pedido_producto  where ID_PEDIDO='$pedido' and ID_PROD='$cod_pro_mo2'";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 
 if($mod_cod_pro3== $eliminar ){
-$sql="delete from pedido_producto  where ID_PEDIDO=$pedido and ID_PROD=$cod_pro_mo3 ";
+$sql="delete from pedido_producto  where ID_PEDIDO='$pedido' and ID_PROD='$cod_pro_mo3'";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 
 if($mod_cod_pro4== $eliminar ){
-$sql="delete from pedido_producto where ID_PEDIDO=$pedido and ID_PROD=$cod_pro_mo4 ";	
+$sql="delete from pedido_producto where ID_PEDIDO='$pedido' and ID_PROD='$cod_pro_mo4'";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 
 if($mod_cod_pro5== $eliminar ){
-$sql="delete from pedido_producto  where ID_PEDIDO=$pedido and ID_PROD=$cod_pro_mo5 ";
+$sql="delete from pedido_producto  where ID_PEDIDO='$pedido' and ID_PROD='$cod_pro_mo5'";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 
 if($mod_cod_pro6== $eliminar ){
-$sql="delete from pedido_producto  where ID_PEDIDO=$pedido and ID_PROD=$cod_pro_mo6 ";	
+$sql="delete from pedido_producto  where ID_PEDIDO='$pedido' and ID_PROD='$cod_pro_mo6'";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 if($mod_cod_pro7== $eliminar ){
-$sql="delete from pedido_producto  where ID_PEDIDO=$pedido and ID_PROD=$cod_pro_mo7 ";
+$sql="delete from pedido_producto  where ID_PEDIDO='$pedido' and ID_PROD='$cod_pro_mo7'";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 if($mod_cod_pro8== $eliminar ){
-$sql="delete from pedido_producto  where ID_PEDIDO=$pedido and ID_PROD=$cod_pro_mo8 ";
+$sql="delete from pedido_producto  where ID_PEDIDO='$pedido' and ID_PROD='$cod_pro_mo8'";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 
 if($mod_cod_pro9== $eliminar ){
-$sql="delete from pedido_producto  where ID_PEDIDO=$pedido and ID_PROD=$cod_pro_mo9 ";
+$sql="delete from pedido_producto  where ID_PEDIDO='$pedido' and ID_PROD='$cod_pro_mo9'";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 
 if($mod_cod_pro10== $eliminar ){
-$sql="delete from pedido_producto where ID_PEDIDO=$pedido and ID_PROD=$cod_pro_mo10 ";
+$sql="delete from pedido_producto where ID_PEDIDO='$pedido' and ID_PROD='$cod_pro_mo10'";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 
 if($mod_cod_pro11== $eliminar ){
-$sql="delete from pedido_producto  where ID_PEDIDO=$pedido and ID_PROD=$cod_pro_mo11 ";
+$sql="delete from pedido_producto  where ID_PEDIDO='$pedido' and ID_PROD='$cod_pro_mo11'";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 
 if($mod_cod_pro12== $eliminar ){
-$sql="delete from pedido_producto  where ID_PEDIDO=$pedido and ID_PROD=$cod_pro_mo12 ";
+$sql="delete from pedido_producto  where ID_PEDIDO='$pedido' and ID_PROD='$cod_pro_mo12'";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 
 if($mod_cod_pro13== $eliminar ){
-$sql="delete from pedido_producto  where ID_PEDIDO=$pedido and ID_PROD=$cod_pro_mo13 ";
+$sql="delete from pedido_producto  where ID_PEDIDO='$pedido' and ID_PROD='$cod_pro_mo13'";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 
 if($mod_cod_pro14== $eliminar ){
-$sql="delete from pedido_producto  where ID_PEDIDO=$pedido and ID_PROD=$cod_pro_mo14 ";
+$sql="delete from pedido_producto  where ID_PEDIDO='$pedido' and ID_PROD='$cod_pro_mo14'";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 
 if($mod_cod_pro15== $eliminar ){
-$sql="delete from pedido_producto  where ID_PEDIDO=$pedido and ID_PROD=$cod_pro_mo15 ";
+$sql="delete from pedido_producto  where ID_PEDIDO='$pedido' and ID_PROD='$cod_pro_mo15'";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 
 if($mod_cod_pro16== $eliminar ){
-$sql="delete from pedido_producto where ID_PEDIDO=$pedido and ID_PROD=$cod_pro_mo16 ";	
+$sql="delete from pedido_producto where ID_PEDIDO='$pedido' and ID_PROD='$cod_pro_mo16'";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 
 if($mod_cod_pro17== $eliminar ){
-$sql="delete from pedido_producto  where ID_PEDIDO=$pedido and ID_PROD=$cod_pro_mo17 ";
+$sql="delete from pedido_producto  where ID_PEDIDO='$pedido' and ID_PROD='$cod_pro_mo17'";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 
 if($mod_cod_pro18== $eliminar ){
-$sql="delete from pedido_producto where ID_PEDIDO=$pedido and ID_PROD=$cod_pro_mo18 ";
+$sql="delete from pedido_producto where ID_PEDIDO='$pedido' and ID_PROD='$cod_pro_mo18'";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 
 if($mod_cod_pro19== $eliminar ){
-$sql="delete from pedido_producto where ID_PEDIDO=$pedido and ID_PROD=$cod_pro_mo19 ";	
+$sql="delete from pedido_producto where ID_PEDIDO='$pedido' and ID_PROD='$cod_pro_mo19'";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 if($mod_cod_pro20== $eliminar ){
-$sql="delete from pedido_producto where ID_PEDIDO=$pedido and ID_PROD=$cod_pro_mo20 ";
+$sql="delete from pedido_producto where ID_PEDIDO='$pedido' and ID_PROD='$cod_pro_mo20'";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 	if($result){

@@ -62,7 +62,7 @@ body {
   $cant=$_POST['cant'];
  //$cant=12;
 
-  $sql="UPDATE Producto SET Id_prod=$cod_pro, Nombre_prod='$nom_pro', descripcion='$descr_pro',  precio=$precio, stock_max= $stock_max,  stock_min= $stock_min, fecha_ing='$fecha', stock=$cant where Id_prod=$cod_pro ";
+  $sql="UPDATE Producto SET Id_prod='$cod_pro', Nombre_prod='$nom_pro', descripcion='$descr_pro',  precio=$precio, stock_max= $stock_max,  stock_min= $stock_min, fecha_ing='$fecha', stock=$cant where Id_prod='$cod_pro' ";
 //$sql="UPDATE Producto SET stock=$cant where Id_prod=$cod_pro";
 // generamos la tabla mediante odbc_result_all(); utilizando borde 1
 $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));

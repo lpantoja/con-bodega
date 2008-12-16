@@ -64,7 +64,7 @@ body {
 function valida(formulario){
 
 	er=/^[0-9]+$/;
-	if(er.test(formulario.cod_pro.value)==false){
+	if(((formulario.cod_pro.value)=='Escoja un codigo') || (!(formulario.cod_pro.value)) ){
 		alert("El campo codigo Producto debe rellenarse con caracteres numéricos");
 		return false; // NO se enviará el formulario.
 	}

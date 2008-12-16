@@ -31,16 +31,16 @@ body {
 	width:200px;
 	height:115px;
 	z-index:1;
-	left: 77px;
-	top: 80px;
+	left: 32px;
+	top: 65px;
 }
 #Layer3 {
 	position:absolute;
 	width:200px;
 	height:115px;
 	z-index:2;
-	left: 403px;
-	top: 69px;
+	left: 301px;
+	top: 44px;
 }
 #Layer4 {
 	position:absolute;
@@ -50,6 +50,35 @@ body {
 	left: 693px;
 	top: 39px;
 }
+#Layer5 {
+	position:absolute;
+	width:246px;
+	height:70px;
+	z-index:4;
+	left: 571px;
+	top: 113px;
+}
+.Estilo1 {
+	color: #990000;
+	font-weight: bold;
+}
+#Layer6 {
+	position:absolute;
+	width:266px;
+	height:79px;
+	z-index:5;
+	left: 2px;
+	top: 76px;
+}
+#Layer7 {
+	position:absolute;
+	width:200px;
+	height:115px;
+	z-index:5;
+	left: 295px;
+	top: 260px;
+}
+.Estilo2 {color: #000000; font-weight: bold; }
 
 -->
   </style></head>
@@ -59,30 +88,79 @@ body {
 	include("seguridad.php");
 	?>
   <div id="Layer1">
-    <div id="Layer2">
-      <p><a href="ing_produc_1.php">Ingresar Producto</a></p>
-      <p><a href="mod_produc_1.php">Modificar Productos </a></p>
-      <p><a href="ing_cant_produc_1.php">Ingresar items de producto</a></p>
-      <p><a href="borrar_productos.php">Borrar productos </a></p>
-      <p><a href="des_produc_1.php">Despachar productos </a></p>
-      <p>&nbsp; </p>
-    </div>
+  
+  <?
+  $persona=$_SESSION["tipo"];
+if($persona==1 || $persona==3){
+echo"    <div id=\"Layer2\">";
+echo"      <p class=\"Estilo2\"> Producto </p>";
+echo"      <p><a href=\"ing_produc_1.php\">Ingresar Producto</a></p>";
+echo"      <p><a href=\"mod_produc_1.php\">Modificar Productos </a></p>";
+echo"      <p><a href=\"ing_cant_produc_1.php\">Ingresar items de producto</a></p>";
+echo"      <p><a href=\"borrar_productos.php\">Borrar productos </a></p>";
+echo"      <p><a href=\"des_produc_1.php\">Despachar productos</a> </p>";
+echo"    </div>";
+}
+if($persona==1 || $persona==2){
+echo"    <div id=\"Layer3\">";
+echo"      <p class=\"Estilo2\"> Pedido	</p>";
+echo"      <p><a href=\"ing_pedido_1.php\">ingresar pedido </a></p>";
+echo"      <p><a href=\"mod_pedido_0.php\">Modificar pedido </a></p>";
+echo"      <p><a href=\"borrar_pedidos.php\">eliminar pedido </a></p>";
+echo"      <p><a href=\"ver_pedido_0.php\">ver pedido </a></p>";
+echo"    </div>";
+}
+if($persona==1 || $persona==1){
+echo"	    <div id=\"Layer7\">";
+echo"      <p class=\"Estilo2\">Usuario</p>";
+echo"      <p><a href=\"ingreso_usuario.php\">ingresa_usuario.php</a></p>";
+echo"      <p><a href=\"mod_usuario_0.php\">modifica usuario</a></p>";
+echo"      <p><a href=\"borra_per.php\">elimina usuario </a></p>";
+echo"    </div>";
+}
+  ?>
+    <div class="Estilo1" id="Layer5">
+	<?
+	  
+		   include ("connect.php");
+		   
+				$sql="SELECT *  FROM producto ";
+				$result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
+			$bann=0;
+				   while (odbc_fetch_row($result))
+				{ 
+					$var2=odbc_result($result,"stock_min") ;
+										$var1=odbc_result($result,"stock") ;
+										
+					if($var1<$var2)
+					$bann=1;					
+				}
+	if($bann==1)			
+		echo"<a href=\"stock_critico.php\"><img src=\"imagenes/Dibujo.JPG\" width=\"30\" height=\"25\"> Productos en Sobre Stock</a>";
+	
+	?>
+    <div class="Estilo1" id="Layer6">	<?
+	  
+		   include ("connect.php");
+		   
+				$sql="SELECT *  FROM producto ";
+				$result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
+			$bann=0;
+			$var2=$var1=0;
+				   while (odbc_fetch_row($result))
+				{ 
+					$var2=odbc_result($result,"stock_max") ;
+										$var1=odbc_result($result,"stock") ;
+										
+					if($var1 >= $var2)
+					$bann=1;					
+				}
+		if($bann==1)
+		echo"<a href=\"sobre_stock.php\"><img src=\"imagenes/Dibujo.JPG\" width=\"30\" height=\"25\"> Productos en Sobre Stock</a> ";
 
-    <div id="Layer3">
-      <p><a href="ing_pedido_1.php">ingresar pedido </a></p>
-      <p><a href="mod_pedido_0.php">Modificar pedido </a></p>
-      <p><a href="borrar_pedidos.php">eliminar pedido </a></p>
-      <p><a href="ver_pedido_0.php">ver pedido </a></p>
-      <p>&nbsp;</p>
-      <p><a href="ingreso_usuario.php">ingresa_usuario.php</a></p>
-      <p><a href="mod_usuario_0.php">modifica usuario</a></p>
-      <p><a href="borra_per.php">elimina usuario  </a></p>
-      <p>&nbsp;</p>
+	?>
+      </div>
     </div>
-    <div id="Layer4">
-      <p><a href="salir.php">Salir</a></p>
-    </div>
-  </div>
   </div>
 </body>
 </html>

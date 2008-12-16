@@ -48,7 +48,7 @@ body {
   <div id="Layer1">
      <?
   include ("connect.php");
-  $cod_pro=$_POST['edad'];
+  $cod_pro=$_POST['cod_pro'];
   $stock_min=$_POST['stock_min'];
   $stock_max=$_POST['stock_max'];
   $precio=$_POST['precio'];
@@ -63,8 +63,9 @@ body {
   // $cant=$_POST['cant'];
 
 
-  $sql="INSERT INTO Producto VALUES ($cod_pro,'$nom_pro', '$descr_pro', $precio, $stock_max, $stock_min, '$fecha', $cant  )";
+  $sql="INSERT INTO Producto VALUES ('$cod_pro','$nom_pro', '$descr_pro', $precio, $stock_max, $stock_min, '$fecha', $cant  )";
 // generamos la tabla mediante odbc_result_all(); utilizando borde 1
+//echo "$sql";
 $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 	if($result){
 	echo" <div class=\"Estilo1\" id=\"Layer2\">";

@@ -56,6 +56,11 @@ body {
 <script>
 function valida(formulario){
 	er=/^[a-zA-Z0-9]+$/;
+	if((formulario.cod_pro.value)==false){
+		alert("El campo codigo producto debe rellenarse con caracteres alfanuméricos simples");
+		return false; // NO se enviará el formulario.
+	}
+	er=/^[a-zA-Z0-9]+$/;
 	if(er.test(formulario.nom_pro.value)==false){
 		alert("El campo Nombre productos debe rellenarse con caracteres alfanuméricos simples");
 		return false; // NO se enviará el formulario.
@@ -116,20 +121,7 @@ function valida(formulario){
         <table width="437" border="3" bordercolor="#004080" bgcolor="#F9FFFF">
           <tr>
             <td width="139" bordercolor="#004080" bgcolor="#F9FFFF"><div align="center" class="Estilo2">C&oacute;digo producto </div></td>
-            <td width="278" bordercolor="#004080" bgcolor="#F9FFFF"><strong>  <?
-		  
-		   include ("connect.php");
-				$sql="SELECT MAX(ID_PROD) AS Total FROM producto ";
-				$result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
-
-			   while (odbc_fetch_row($result))
-				{ 
-					$var=odbc_result($result,"Total") + 1;
-					echo"$var";
-					
-				}
-		 
-          ?> </strong></td>
+            <td width="278" bordercolor="#004080" bgcolor="#F9FFFF"><input type="text" name="cod_pro"> </td>
           </tr>
           <tr>
             <td bordercolor="#004080" bgcolor="#F9FFFF"><div align="center" class="Estilo2">Nombre producto </div></td>
@@ -189,20 +181,6 @@ function valida(formulario){
         </table>
         <p>
           <label>
-		  <?
-		  
-		   include ("connect.php");
-				$sql="SELECT Count(*) AS Total FROM producto ";
-				$result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
-
-			   while (odbc_fetch_row($result))
-				{ 
-					$var=odbc_result($result,"Total") + 1;
-					echo"<input type= \"hidden\" name=\"edad\" value=\"$var\">";
-					
-				}
-		 
-          ?>
 		  <input type="submit" name="enviar" value="Enviar">
 		  
           </label>

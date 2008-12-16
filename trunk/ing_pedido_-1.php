@@ -96,108 +96,108 @@ $usuario=$_SESSION["login"];
 
 	
 if($cant_prod0){
- $sql="INSERT INTO Pedido_producto VALUES ($cod_pro0,$pedido, $cant_prod0)";
+ $sql="INSERT INTO Pedido_producto VALUES ('$cod_pro0','$pedido', $cant_prod0)";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 
 if($cant_prod1){
- $sql="INSERT INTO Pedido_producto VALUES ($cod_pro1,$pedido, $cant_prod1)";
+ $sql="INSERT INTO Pedido_producto VALUES ('$cod_pro1','$pedido', $cant_prod1)";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 
 if($cant_prod2){
- $sql="INSERT INTO Pedido_producto VALUES ($cod_pro2,$pedido, $cant_prod2)";
+ $sql="INSERT INTO Pedido_producto VALUES ('$cod_pro2','$pedido', $cant_prod2)";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 
 if($cant_prod3){
- $sql="INSERT INTO Pedido_producto VALUES ($cod_pro3,$pedido, $cant_prod3)";
+ $sql="INSERT INTO Pedido_producto VALUES ('$cod_pro3','$pedido', $cant_prod3)";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 
 if($cant_prod4){
- $sql="INSERT INTO Pedido_producto VALUES ($cod_pro4,$pedido, $cant_prod4)";
+ $sql="INSERT INTO Pedido_producto VALUES ('$cod_pro4','$pedido', $cant_prod4)";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 
 if($cant_prod5){
- $sql="INSERT INTO Pedido_producto VALUES ($cod_pro5,$pedido, $cant_prod5)";
+ $sql="INSERT INTO Pedido_producto VALUES ('$cod_pro5','$pedido', $cant_prod5)";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 
 if($cant_prod6){
- $sql="INSERT INTO Pedido_producto VALUES ($cod_pro6,$pedido, $cant_prod6)";
+ $sql="INSERT INTO Pedido_producto VALUES ('$cod_pro6','$pedido', $cant_prod6)";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 if($cant_prod7){
- $sql="INSERT INTO Pedido_producto VALUES ($cod_pro7,$pedido, $cant_prod7)";
+ $sql="INSERT INTO Pedido_producto VALUES ('$cod_pro7','$pedido', $cant_prod7)";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 if($cant_prod){
- $sql="INSERT INTO Pedido_producto VALUES ($cod_pro,$pedido, $cant_prod)";
+ $sql="INSERT INTO Pedido_producto VALUES ('$cod_pro','$pedido', $cant_prod)";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 if($cant_prod8){
- $sql="INSERT INTO Pedido_producto VALUES ($cod_pro8,$pedido, $cant_prod8)";
+ $sql="INSERT INTO Pedido_producto VALUES ('$cod_pro8','$pedido', $cant_prod8)";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 
 if($cant_prod9){
- $sql="INSERT INTO Pedido_producto VALUES ($cod_pro9,$pedido, $cant_prod9)";
+ $sql="INSERT INTO Pedido_producto VALUES ('$cod_pro9','$pedido', $cant_prod9)";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 
 if($cant_prod10){
- $sql="INSERT INTO Pedido_producto VALUES ($cod_pro10,$pedido, $cant_prod10)";
+ $sql="INSERT INTO Pedido_producto VALUES ('$cod_pro10','$pedido', $cant_prod10)";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 
 if($cant_prod11){
- $sql="INSERT INTO Pedido_producto VALUES ($cod_pro11,$pedido, $cant_prod11)";
+ $sql="INSERT INTO Pedido_producto VALUES ('$cod_pro11','$pedido', $cant_prod11)";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 
 if($cant_prod12){
- $sql="INSERT INTO Pedido_producto VALUES ($cod_pro12,$pedido, $cant_prod12)";
+ $sql="INSERT INTO Pedido_producto VALUES ('$cod_pro12','$pedido', $cant_prod12)";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 
 if($cant_prod13){
- $sql="INSERT INTO Pedido_producto VALUES ($cod_pro13,$pedido, $cant_prod13)";
+ $sql="INSERT INTO Pedido_producto VALUES ('$cod_pro13','$pedido', $cant_prod13)";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 
 if($cant_prod14){
- $sql="INSERT INTO Pedido_producto VALUES ($cod_pro14,$pedido, $cant_prod14)";
+ $sql="INSERT INTO Pedido_producto VALUES ('$cod_pro14','$pedido', $cant_prod14)";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 
 if($cant_prod15){
- $sql="INSERT INTO Pedido_producto VALUES ($cod_pro15,$pedido, $cant_prod15)";
+ $sql="INSERT INTO Pedido_producto VALUES ('$cod_pro15','$pedido', $cant_prod15)";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 
 if($cant_prod16){
- $sql="INSERT INTO Pedido_producto VALUES ($cod_pro16,$pedido, $cant_prod16)";
+ $sql="INSERT INTO Pedido_producto VALUES ('$cod_pro16','$pedido', $cant_prod16)";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 
 if($cant_prod17){
- $sql="INSERT INTO Pedido_producto VALUES ($cod_pro17,$pedido, $cant_prod17)";
+ $sql="INSERT INTO Pedido_producto VALUES ('$cod_pro17','$pedido', $cant_prod17)";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 
 if($cant_prod18){
- $sql="INSERT INTO Pedido_producto VALUES ($cod_pro18,$pedido, $cant_prod18)";
+ $sql="INSERT INTO Pedido_producto VALUES ('$cod_pro18','$pedido', $cant_prod18)";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 
 if($cant_prod19){
- $sql="INSERT INTO Pedido_producto VALUES ($cod_pro19,$pedido, $cant_prod19)";
+ $sql="INSERT INTO Pedido_producto VALUES ('$cod_pro19','$pedido', $cant_prod19)";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 if($cant_prod20){
- $sql="INSERT INTO Pedido_producto VALUES ($cod_pro20,$pedido, $cant_prod20)";
+ $sql="INSERT INTO Pedido_producto VALUES ('$cod_pro20','$pedido', $cant_prod20)";
  $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
 }
 

@@ -53,9 +53,9 @@ body {
 <div id="Layer1">
 <?php
 include("connect.php");
-$rut=$_POST['user'];
+$rut=$_POST['USUARIO'];
 $rut=$rut.'-'.$_POST['dig'];
-$clave=$_POST['pass'];
+$clave=$_POST['passe'];
 $nombre=$_POST['nombre'];
 $apellidos=$_POST['apellidos'];
 $direccion=$_POST['email'];
@@ -79,7 +79,6 @@ for($i=0;$i<$largo;$i++){
 	
 $sql="INSERT INTO usuario VALUES ('$rut','$tipo','$login', '$nombre', '$apellidos', '$direccion', '$telefono', '$clave')";
 $result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
-//echo "<p>$sql";
 
 if($result) {
 echo "<div class=\"Estilo4\" id=\"Layer2\">Tus Datos ya est&aacute;n registrados en la base de datos. Ya se puedes acceder al sistema Con el login '$login' </div>";
