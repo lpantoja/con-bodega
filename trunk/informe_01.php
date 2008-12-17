@@ -81,7 +81,7 @@ body {
     $dia=$_POST['dia'];
   $mes=$_POST['mes'];
     $ano=$_POST['ano'];
-
+	$cod_pro=$_POST['cod_pro'];
 
 if($dia && ($dia != 'Elija Dia') && ($mes != 'Elija Mes') ){
   $fecha=$dia.$mes.$ano;

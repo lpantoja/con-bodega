@@ -1,6 +1,3 @@
-<?
-	include("seguridad.php");
-	?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/html40/loose.dtd">
 <html>
   <head>
@@ -23,7 +20,7 @@ body {
 #Layer1 {
 	position:absolute;
 	width:798px;
-	height:449px;
+	height:488px;
 	z-index:1;
 	left: 0px;
 	top: -36px;
@@ -81,55 +78,45 @@ body {
 	left: 295px;
 	top: 260px;
 }
-#Layer8 {
-	position:absolute;
-	width:255px;
-	height:33px;
-	z-index:5;
-	left: 542px;
-	top: 413px;
-}
+.Estilo2 {color: #000000; font-weight: bold; }
 
 -->
   </style></head>
   <body >
-<div id="Layer2" style="position:absolute; left:679px; top:8px; width:108px; height:28px; z-index:2">
-<?
-echo"      <p><a href=\"sessclose.php\" target =\"_top\" ><img src=\"imagenes/salir.JPG\"> </a></p>";
-?>
-</div>
 <div style="width: 800px; position: relative; margin-left: auto; margin-right: auto; left: 0; top: 0;">
-	
-  <div id="Layer1">
+ <div id="Layer1">
+	<?
+	include("seguridad.php");
+	?>
+ 
   
   <?
   $persona=$_SESSION["tipo"];
 if($persona==1 || $persona==3){
 echo"    <div id=\"Layer2\">";
-echo"      <p class=\"Estilo2\"><img src=\"imagenes/p.JPG\"></p>";
-		
-echo"      <p><a href=\"ing_produc_1.php\"><img src=\"imagenes/ingresaproduct.JPG\"></a></p>";
-echo"      <p><a href=\"mod_produc_1.php\"><img src=\"imagenes/moproduct.JPG\"></a></p>";
-echo"      <p><a href=\"ing_cant_produc_1.php\"><img src=\"imagenes/items.JPG\"></a></p>";
-echo"      <p><a href=\"borrar_productos.php\"><img src=\"imagenes/borrar.JPG\"></a></p>";
-echo"      <p><a href=\"des_produc_1.php\"><img src=\"imagenes/despacho.JPG\"></a> </p>";
+echo"      <p class=\"Estilo2\"> Producto </p>";
+echo"      <p><a href=\"ing_produc_1.php\">Ingresar Producto</a></p>";
+echo"      <p><a href=\"mod_produc_1.php\">Modificar Productos </a></p>";
+echo"      <p><a href=\"ing_cant_produc_1.php\">Ingresar items de producto</a></p>";
+echo"      <p><a href=\"borrar_productos.php\">Borrar productos </a></p>";
+echo"      <p><a href=\"des_produc_1.php\">Despachar productos</a> </p>";
 echo"    </div>";
 }
 if($persona==1 || $persona==2){
 echo"    <div id=\"Layer3\">";
-echo"      <p class=\"Estilo2\"><img src=\"imagenes/pd.JPG\">	</p>";
-echo"      <p><a href=\"ing_pedido_1.php\"><img src=\"imagenes/ipedido.JPG\"> </a></p>";
-echo"      <p><a href=\"mod_pedido_0.php\"><img src=\"imagenes/mpedido.JPG\"> </a></p>";
-echo"      <p><a href=\"borrar_pedidos.php\"><img src=\"imagenes/epedido.JPG\"> </a></p>";
-echo"      <p><a href=\"ver_pedido_0.php\"><img src=\"imagenes/vpedido.JPG\"> </a></p>";
+echo"      <p class=\"Estilo2\"> Pedido	</p>";
+echo"      <p><a href=\"ing_pedido_1.php\">ingresar pedido </a></p>";
+echo"      <p><a href=\"mod_pedido_0.php\">Modificar pedido </a></p>";
+echo"      <p><a href=\"borrar_pedidos.php\">eliminar pedido </a></p>";
+echo"      <p><a href=\"ver_pedido_0.php\">ver pedido </a></p>";
 echo"    </div>";
 }
 if($persona==1 || $persona==1){
 echo"	    <div id=\"Layer7\">";
-echo"      <p class=\"Estilo2\"><img src=\"imagenes/us.JPG\">	</p>";
-echo"      <p><a href=\"ingreso_usuario.php\"><img src=\"imagenes/cuser.JPG\"></a></p>";
-echo"      <p><a href=\"mod_usuario_0.php\"><img src=\"imagenes/muser.JPG\"></a></p>";
-echo"      <p><a href=\"borra_per.php\"><img src=\"imagenes/euser.JPG\"></a></p>";
+echo"      <p class=\"Estilo2\">Usuario</p>";
+echo"      <p><a href=\"ingreso_usuario.php\">ingresa_usuario.php</a></p>";
+echo"      <p><a href=\"mod_usuario_0.php\">modifica usuario</a></p>";
+echo"      <p><a href=\"borra_per.php\">elimina usuario </a></p>";
 echo"    </div>";
 }
   ?>
@@ -150,7 +137,7 @@ echo"    </div>";
 					$bann=1;					
 				}
 	if($bann==1)			
-		echo"<a href=\"stock_critico.php\"><img src=\"imagenes/min.JPG\"> </a>";
+		echo"<a href=\"stock_critico.php\"><img src=\"imagenes/Dibujo.JPG\" width=\"30\" height=\"25\"> Productos en Sobre Stock</a>";
 	
 	?>
     <div class="Estilo1" id="Layer6">	<?
@@ -170,25 +157,12 @@ echo"    </div>";
 					$bann=1;					
 				}
 		if($bann==1)
-		echo"<a href=\"sobre_stock.php\"><img src=\"imagenes/max.JPG\"></a> ";
+		echo"<a href=\"sobre_stock.php\"><img src=\"imagenes/Dibujo.JPG\" width=\"30\" height=\"25\"> Productos en Sobre Stock</a> ";
 
 	?>
-      </div>
+	</div>
     </div>
-    <div id="Layer8"><strong>
-	<?
-	
-  $login=$_SESSION["login"];
- $sql="select *  from usuario where id_usuario='$login' ";
-				$result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec")); 
-				
-				 while (odbc_fetch_row($result))
-				{ 
-				$var1=odbc_result($result,"nombre");
-				$var2=odbc_result($result,"apellidos");
-echo"	Bienvenido $var1 $var2";
-}
-	?></strong></div>
+  </div>
   </div>
 </body>
 </html>

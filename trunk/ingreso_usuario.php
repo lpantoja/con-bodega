@@ -62,18 +62,48 @@ body {
 -->
 </style>
 <script>
+function cal_verificador(formulario){ 
+  var i=1,j=1,suma=0;
+var intlargo = formulario.rut.value;
+
+// for(i=0;i<fotmulario.rut.length;i++)
+	// i=(formulario.rut.value.charAt(1));
+//	 i=i*1 + 5;
+i=intlargo.length;
+if(i==9)
+	return false;
+if(i==8){
+ suma=(formulario.rut.value.charAt(7))*2 + (formulario.rut.value.charAt(6))*3 + (formulario.rut.value.charAt(5))*4 + (formulario.rut.value.charAt(4))*5 + (formulario.rut.value.charAt(3))*6 + (formulario.rut.value.charAt(2))*7 + (formulario.rut.value.charAt(1))*2 + (formulario.rut.value.charAt(0))*3 ;
+}
+if(i==7){
+ 
+ suma=(formulario.rut.value.charAt(6))*2 + (formulario.rut.value.charAt(5))*3 + (formulario.rut.value.charAt(4))*4 + (formulario.rut.value.charAt(3))*5 + (formulario.rut.value.charAt(2))*6 + (formulario.rut.value.charAt(1))*7 + (formulario.rut.value.charAt(0))*2;
+
+}
+	if((11- suma%11)==10)
+            dig_v='k';
+     else
+           dig_v= (11 - suma%11);
+	
+	if(dig_v != formulario.dig.value){
+	 alert("Su rut es invalido");
+	 return false;
+	 }
+}
+
 function valida(formulario){
 
 	er=/^[0-9]+$/;
-	if(er.test(formulario.USUARIO.value)==false){
+	if(er.test(formulario.rut.value)==false){
 		alert("El campo usuario debe rellenarse con caracteres alfanuméricos simples");
 		return false; // NO se enviará el formulario.
 	}
-	er=/^[0-9]+$/;
-	if(er.test(formulario.dig.value)==false){
+	if((formulario.dig.value)==false){
 		alert("El segundo campo del rut (digito verificador) debe ingresarse");
 		return false; // NO se enviará el formulario.
 	}
+		if(cal_verificador(formulario)==false)
+			return false;
 	er=/^[a-zA-Z0-9]+$/;
 	if(er.test(formulario.passe.value)==false){
 		alert("El campo clave debe rellenarse con caracteres alfanuméricos simples");
@@ -112,7 +142,7 @@ function valida(formulario){
 <td width="31%" height="33"><span class="Estilo4"><strong>Rut</strong>:</span></td>
 <td width="69%">
  
-  <input type="text" name="USUARIO" size="20" maxlength="20">
+  <input type="text" name="rut" size="20" maxlength="20">
   <strong>-</strong>
  <label>
  <input name="dig" type="text" size="1" maxlength="1" />

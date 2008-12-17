@@ -67,7 +67,13 @@ body {
 -->
   </style>
   <script>
+
  function valida(formulario){
+
+	if((formulario.cod_pro.value)=='Escoga un codigo'){
+		alert("El campo codigo Producto debe rellenarse con caracteres numéricos");
+		return false; // NO se enviará el formulario.
+	}
 		er=/^[0-9]+$/;
 	if(er.test(formulario.ano.value)==false){
 		alert("El campo año rellenarse con el año");
@@ -85,11 +91,28 @@ body {
     <div class="Estilo1" id="Layer2">Informe Pedidos </div>
     <div id="Layer4">
 	
-<form  onSubmit="return valida(formulario2)" name="formulario2" method="post" action="informe_01.php">
+<form  onSubmit="return valida(formulario2)" name="formulario2" method="post" action="informe_proped_01.php">
 	  <table width="516" border="3" bordercolor="#004080" bgcolor="#F9FFFF">
+	          <tr>
+            <td width="163" bordercolor="#004080" bgcolor="#F9FFFF"><div align="center" class="Estilo2">C&oacute;digo Producto </div></td>
+            <td width="333" bordercolor="#004080" bgcolor="#F9FFFF"> <select name="cod_pro" >
+			<option>Escoga un codigo</option> 
+		   <? 
+                 include ("connect.php");
+				$sql="Select * from Producto ";
+				$result=odbc_exec($cid,$sql)or die(exit("Error en odbc_exec"));
+
+			   while (odbc_fetch_row($result))
+				{ 
+					$var=odbc_result($result,"Id_prod");
+			   echo"		<option> $var </option>";
+               }
+		  ?>
+             </select>  </td>
+          </tr> 
           <tr>
-            <td width="136" bordercolor="#004080" bgcolor="#F9FFFF"><div align="center" class="Estilo2">Pedidos </div></td>
-            <td width="360" bordercolor="#004080" bgcolor="#F9FFFF">	<select name="dia" > 
+            <td width="163" bordercolor="#004080" bgcolor="#F9FFFF"><div align="center" class="Estilo2">Pedidos </div></td>
+            <td width="333" bordercolor="#004080" bgcolor="#F9FFFF">	<select name="dia" > 
 
 			<option selected>Elija Dia</option>
 			<? 

@@ -20,7 +20,7 @@ body {
 #Layer1 {
 	position:absolute;
 	width:800px;
-	height:446px;
+	height:560px;
 	z-index:0;
 	left: 0;
 	top: -16px;
@@ -31,8 +31,8 @@ body {
 	width:200px;
 	height:39px;
 	z-index:1;
-	left: 260px;
-	top: 3px;
+	left: 271px;
+	top: 18px;
 }
 #Layer3 {
 	position:absolute;
@@ -42,14 +42,18 @@ body {
 	left: 99px;
 	top: 62px;
 }
-.Estilo3 {color: #004080; font-weight: bold; }
+.Estilo4 {
+	color: #000000;
+	font-weight: bold;
+	font-size: 18px;
+}
 -->
   </style></head>
   <body >
 <div style="width: 800px; position: relative; margin-left: auto; margin-right: auto; left: 0; top: 0;">
 	
   <div id="Layer1">
-    <div id="Layer2"><strong>productos en sobre stock </strong></div>
+    <div class="Estilo4" id="Layer2">Productos en sobre stock </div>
     <div id="Layer3">
 <?
 echo"      <table width=\"520\" border=\"1\">";

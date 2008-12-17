@@ -26,47 +26,12 @@ body {
 	top: -16px;
 	background-color: #FFFFFF;
 }
-#Layer2 {
-	position:absolute;
-	width:256px;
-	height:25px;
-	z-index:1;
-	left: 237px;
-	top: 16px;
-}
-.Estilo1 {
-	color: #004080;
-	font-weight: bold;
-	font-size: 18px;
-}
-#Layer3 {
-	position:absolute;
-	width:389px;
-	height:355px;
-	z-index:2;
-	left: 40px;
-	top: 69px;
-}
 -->
   </style></head>
   <body >
 <div style="width: 800px; position: relative; margin-left: auto; margin-right: auto; left: 0; top: 0;">
 	
-  <div id="Layer1">
-    <div class="Estilo1" id="Layer2">INFORMES</div>
-    <div id="Layer3">
-      <ul>
-        <li><a href="informe_0.php">INFORME DE PEDIDOS </a></li>
-      </ul>
-      <ul>
-        <li><a href="informe_pro_0.php">INFORME DE PRODUCTOS</a></li>
-      </ul>
-      <ul>
-        <li><a href="informe_proped_0.php">INFORME DE PRODUCTO EN PEDIDOS  </a></li>
-      </ul>
-      <p>&nbsp;</p>
-    </div>
-  </div>
+  <div id="Layer1"></div>
   </div>
 </body>
 </html>

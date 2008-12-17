@@ -88,8 +88,12 @@ body {
     <div class="Estilo1" id="Layer2">Datos del pedido </div>
     <?
 	  include ("connect.php");
+	  if($_POST['cod_pro'])
 	   $pedido=$_POST['cod_pro'];
+	  if($_GET['cod_pro'])
 	     $pedido=$_GET['cod_pro'];
+		 
+		 
 	echo"<div id=\"Layer3\">";
 echo"      <table width=\"481\" border=\"3\" bordercolor=\"#004080\" bgcolor=\"#F9FFFF\">";
 echo"        <tr>";

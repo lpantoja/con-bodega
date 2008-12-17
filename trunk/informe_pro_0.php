@@ -82,13 +82,13 @@ body {
 <div style="width: 800px; position: relative; margin-left: auto; margin-right: auto; left: 0; top: 0;">
 	
   <div id="Layer1">
-    <div class="Estilo1" id="Layer2">Informe Pedidos </div>
+    <div class="Estilo1" id="Layer2">Informe Productos </div>
     <div id="Layer4">
 	
-<form  onSubmit="return valida(formulario2)" name="formulario2" method="post" action="informe_01.php">
+<form  onSubmit="return valida(formulario2)" name="formulario2" method="post" action="informe_pro_01.php">
 	  <table width="516" border="3" bordercolor="#004080" bgcolor="#F9FFFF">
           <tr>
-            <td width="136" bordercolor="#004080" bgcolor="#F9FFFF"><div align="center" class="Estilo2">Pedidos </div></td>
+            <td width="136" bordercolor="#004080" bgcolor="#F9FFFF"><div align="center" class="Estilo2">Productos</div></td>
             <td width="360" bordercolor="#004080" bgcolor="#F9FFFF">	<select name="dia" > 
 
 			<option selected>Elija Dia</option>

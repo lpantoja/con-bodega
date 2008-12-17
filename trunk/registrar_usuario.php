@@ -53,7 +53,7 @@ body {
 <div id="Layer1">
 <?php
 include("connect.php");
-$rut=$_POST['USUARIO'];
+$rut=$_POST['rut'];
 $rut=$rut.'-'.$_POST['dig'];
 $clave=$_POST['passe'];
 $nombre=$_POST['nombre'];
