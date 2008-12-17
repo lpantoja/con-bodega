@@ -74,19 +74,19 @@ function valida(formulario){
 
 	er=/^[0-9]+$/;
 	if(er.test(formulario.precio.value)==false){
-		alert("El campo Precio debe rellenarse con caracteres alfabéticos");
+		alert("El campo Precio debe rellenarse con caracteres Númericos");
 		return false; // NO se enviará el formulario.
 	}
 	
 	er=/^[0-9]+$/;
 	if(er.test(formulario.stock_max.value)==false){
-		alert("El campo Stock Max debe rellenarse con caracteres alfabéticos");
+		alert("El campo Stock Max debe rellenarse con caracteres Númericos");
 		return false; // NO se enviará el formulario.
 	}
 	
 	er=/^[0-9]+$/;
 	if(er.test(formulario.stock_min.value)==false){
-		alert("El campo Sotck Min rellenarse con caracteres alfabéticos");
+		alert("El campo Sotck Min rellenarse con caracteres Númericos");
 		return false; // NO se enviará el formulario.
 	}
 		er=/^[0-9]+$/;
