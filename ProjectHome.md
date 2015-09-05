@@ -1,0 +1,1 @@
+este es el sistema de control de bodega copeval, para manejar entre otras cosas el stock maximo y minimo de dichga bodega
